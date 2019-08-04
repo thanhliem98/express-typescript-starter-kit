@@ -1,26 +1,23 @@
 {
-  "name": "express-typescript-starter",
-  "version": "0.1.0",
-  "description": "A starting point for Node.js express apps with TypeScript",
+  "name": "express-typescript-starter-kit",
+  "version": "1.0.0",
+  "description": "Express Typescript Starter Kit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/TypeScript-Node-Starter"
+    "url": "https://github.com/thanhliem98/express-typescript-starter-kit"
   },
-  "author": "Bowden Kelly",
+  "author": "Ly Thanh Liem",
   "license": "MIT",
   "scripts": {
     "start": "npm run serve",
-    "build": "npm run build-sass && npm run build-ts && npm run lint && npm run copy-static-assets",
+    "build": "npm run build-sass && npm run build-ts && npm run copy-static-assets",
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run watch-node\"",
-    "test": "jest --forceExit --coverage --verbose",
-    "watch-test": "npm run test -- --watchAll",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "build-sass": "node-sass src/public/css/main.scss dist/public/css/main.css",
     "watch-sass": "node-sass -w src/public/css/main.scss dist/public/css/main.css",
-    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
     "debug": "npm run build && npm run watch-debug",
     "serve-debug": "nodemon --inspect dist/server.js",
@@ -62,8 +59,10 @@
     "@types/shelljs": "^0.8.5",
     "@types/winston": "^2.3.9",
     "concurrently": "^4.1.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
     "shelljs": "^0.8.3",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.2"
   }
 }
