@@ -1,3 +1,5 @@
+import 'module-alias/register';
+import { MONGODB_URI, SESSION_SECRET } from "@app/config/env";
 import express from "express";
 import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
 import session from "express-session";
@@ -5,10 +7,8 @@ import bodyParser from "body-parser";
 import flash from "express-flash";
 import path from "path";
 import mongoose from "mongoose";
-import { MONGODB_URI, SESSION_SECRET } from "./config/env";
 import compression from 'compression';
 import lusca from 'lusca';
-
 import { homeController } from './controllers/home';
 
 // Create Express server
