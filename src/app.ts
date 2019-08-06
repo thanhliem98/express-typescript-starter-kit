@@ -9,7 +9,9 @@ import path from "path";
 import mongoose from "mongoose";
 import compression from 'compression';
 import lusca from 'lusca';
-import { homeController } from './controllers/home';
+import routers from '@app/routers';
+import hbs from 'hbs';
+
 
 // Create Express server
 const app = express();
@@ -24,10 +26,14 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true }).then(
     process.exit();
 });
 
+// Hbs Configuration 
+hbs.registerPartials(path.join(__dirname, "../views/partials"));
+
 // Express configuration
 app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "hbs");
+app.set('view options', { layout: 'layouts/home' });
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -49,8 +55,7 @@ app.use(
     express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
 );
 
-app.get('/', homeController.index);
-
+app.use('/', routers);
 app.use(async (err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err) {
         console.log(err.message);
