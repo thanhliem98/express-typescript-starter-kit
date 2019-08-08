@@ -7,7 +7,6 @@ export class HomeController {
 
     index = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            if (req.query.type === 'error') throw new Error("error");
             res.render('index');
         }
         catch (err) {

@@ -1,3 +1,55 @@
-<div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ut eos eum exercitationem sed repudiandae labore
-    nesciunt molestias, assumenda vel cumque nihil consectetur, consequatur placeat error laboriosam ipsa quos sint!
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {{#each posts}}
+
+            <div class="article">
+                <div class="card mb-4 shadow-sm">
+                    <div class="text-center">
+                        <a href="/bai-viet/{{slug}}"> <img class="bd-placeholder-img card-img-top" src="{{thumb}}"
+                                alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <h2><a href="/bai-viet/{{slug}}">{{title}}</a>
+                        </h2>
+
+                        <div class="info">
+                            <span class="time">{{createdAt}}</span>
+                            <span class="comment">4 bình luận</span>
+                        </div>
+
+                        <p class="card-text">{{content}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                {{!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> --}}
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{/each}}
+
+        </div>
+        <div class="col-md-4">
+            <div class="sidebar-home">
+                {{> sidebar_home}}
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class='wrap-pagination'>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
 </div>

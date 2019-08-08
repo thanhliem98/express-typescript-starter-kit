@@ -1,68 +1,76 @@
-@import "themes/default/variables";
-
 @import "lib/bootstrap/bootstrap";
-@import "lib/font-awesome/font-awesome";
-
-@import "themes/default/default";
-
-// Scaffolding
-// -------------------------
-
-html {
-  position: relative;
-  min-height: 100%;
-}
 
 body {
-  padding-top: 80px;
-  margin-bottom: 75px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-
-  p, ul {
-    margin-bottom: 0;
-  }
+p {
+    color: #3a4749;
+    opacity: 0.75;
+    letter-spacing: 0.272px;
 }
 
-// Input Fields
-// -------------------------
-
-textarea {
-  resize: vertical;
+.article {
+    margin: 36px 0;
 }
 
-// Navbar
-// -------------------------
-
-.navbar-nav img {
-  width: 30px;
-  height: 30px;
-  margin: -15px 15px -15px;
+.article .info {
+    margin: 14px 0px;
+    font-weight: bold;
+    opacity: 0.75;
+    text-transform: uppercase;
 }
 
-// Alerts
-// -------------------------
-
-.alert {
-  margin-top: 20px;
+.article .info .time {
+    margin-right: 8px;
 }
 
-// Thumbnails
-// -------------------------
-
-.thumbnail {
-  padding: 0;
-  border-radius: 0;
-  box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+.article .info .comment {
+    margin-right: 8px;
 }
 
-// Font Icons
-// -------------------------
+.footer {
+    background-color: #f5f5f5;
+}
 
-.fa {
-  margin-right: 6px;
+.sidebar-home {
+    margin: 36px 0;
+}
+
+.sidebar-home .widget_search {
+    background: #e9ecf1;
+    padding-top: 35px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    border-radius: 8px;
+}
+
+.sidebar-home .widget {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    border: none;
+}
+
+.search-bar {
+    padding: 20px;
+    background: red;
+}
+
+.wrap-pagination {
+    margin-bottom: 32px;
+}
+
+.detail {
+    margin: 36px 0;
+}
+
+.detail .title {
+    padding: 16px 0;
+}
+
+.detail .content {
+    padding: 8px 0;
 }
